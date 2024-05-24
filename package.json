@@ -1,0 +1,29 @@
+{
+  "name": "article",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "node --loader=ts-node/esm --env-file=.env --watch src/index.ts",
+    "start": "node --env-file=.env dist/index.js",
+    "build": "tsc",
+    "db:generate": "npx drizzle-kit generate",
+    "db:migrate": "npx drizzle-kit migrate",
+    "db:studio": "npx drizzle-kit studio --port 4000"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@libsql/client": "^0.6.0",
+    "drizzle-orm": "^0.30.10",
+    "express": "^4.19.2",
+    "express-validator": "^7.1.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "drizzle-kit": "^0.21.2",
+    "ts-node": "^10.9.2"
+  }
+}
